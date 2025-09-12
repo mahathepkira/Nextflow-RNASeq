@@ -1,0 +1,53 @@
+process {
+  executor = 'slurm'
+  queue = 'memory'
+  cache = 'lenient'
+
+  withName: TrimmmomaticParied {
+    module = 'Trimmomatic/0.38-Java-1.8'
+    cpus = 8
+    memory = '64 GB'
+  }
+
+  withName: TrimmmomaticSingle {
+    module = 'Trimmomatic/0.38-Java-1.8'
+    cpus = 8
+    memory = '64 GB'
+  }
+
+  withName:  {
+    module = 'FastQC/0.11.9-Java-11'
+    cpus = 8
+    memory = '64 GB'
+  }
+
+  withName: FastqcForSingle {
+    module = 'FastQC/0.11.9-Java-11'
+    cpus = 8
+    memory = '64 GB'
+  }
+
+  withName: STARForPaired {
+    module = ''
+    cpus = 8
+    memory = '64 GB'
+  }
+
+  withName: STARForSingle {
+    module = ''
+    cpus = 8
+    memory = '64 GB'
+  }
+
+  withName: Qualimap {
+  container = '/nbt_main/share/singularity/qualimap:2.3--hdfd78af_0'
+  cpus = 4
+  memory = '32 GB'
+  }
+
+}
+
+singularity {
+    enabled = true
+    autoMounts = true
+}
