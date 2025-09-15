@@ -10,7 +10,7 @@ nextflow run -profile gb main.nf \
     --unmaped Within \
     --overhang 100 \
     --output output \
-## For run paired-edn   
+## For run paired-end  
 nextflow run -profile gb main.nf \
     --input data-paired \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
