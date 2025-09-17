@@ -1,6 +1,7 @@
 # Nextflow-RNASeq
 
 ## For run single-end
+```bash
 nextflow run -profile gb main.nf \
     --input data-single \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
@@ -10,7 +11,9 @@ nextflow run -profile gb main.nf \
     --unmaped Within \
     --overhang 100 \
     --output output \
+```
 ## For run paired-end  
+```bash
 nextflow run -profile gb main.nf \
     --input data-paired \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
@@ -20,3 +23,5 @@ nextflow run -profile gb main.nf \
     --unmaped Within \
     --overhang 100 \
     --output output \
+```
+
