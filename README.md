@@ -10,6 +10,10 @@ nextflow run -profile gb main.nf \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
+    --conditions Condition \
+    --contrast ESR_vs_Fi \
+    --padj 0.05 \
+    --lfc 1.0 \
     --output output \
 ```
 ## For run paired-end  
@@ -22,6 +26,10 @@ nextflow run -profile gb main.nf \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
+    --conditions Condition \
+    --contrast ESR_vs_Fi \
+    --padj 0.05 \
+    --lfc 1.0 \
     --output output \
 ```
 
