@@ -71,8 +71,19 @@ Annotations_custom
 ```
 
 ```bash
-Annotations
-├── ANN_SnpSift
+RNAseq_paired
+├── DESeq2ForGene
+├── DESeq2ForIso
+├── FastpForPaired
+├── FastqcForPairedAfter
+├── FastqcForPairedBefore
+├── MergeRSEMResultsGenes
+├── MergeRSEMResultsIso
+├── Quliamap
+├── RSEMForPaired
+├── STARForPaired
+
+
 │    ├──{samples}_SnpSift.vcf.gz
 └── ANN_snpEff
      ├── {samples}.ann.vcf.gz 
