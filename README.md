@@ -50,3 +50,47 @@ nextflow run -profile gb main.nf \
     --lfc 1.0 \
     --output results \
 ```
+## 6. Output
+### ภาพรวม Output
+```bash
+Annotations
+└── ANN_snpEff
+     ├── {samples}.ann.vcf.gz 
+     ├── {samples}_summary.genes.txt       
+     └── {samples}_summary.html
+```
+
+```bash
+Annotations_custom
+├── BuildCustomDB
+│    ├──snpeff_build.log
+└── ANN_snpEff
+     ├── {samples}.ann.vcf.gz 
+     ├── {samples}_summary.genes.txt       
+     └── {samples}_summary.html
+```
+
+```bash
+Annotations
+├── ANN_SnpSift
+│    ├──{samples}_SnpSift.vcf.gz
+└── ANN_snpEff
+     ├── {samples}.ann.vcf.gz 
+     ├── {samples}_summary.genes.txt       
+     └── {samples}_summary.html
+```
+
+```bash
+Annotations
+├── Call_ANN
+│    ├── {samples}_overlap_shared.vcf.gz
+├── Combine_VCF
+│    ├── {samples}_combine.vcf.gz
+├── Compare_results
+│    ├── {samples}_overlap.vcf.gz
+│    └── {samples}_unique.vcf.gz
+└── ANN_snpEff
+     ├── {samples}.ann.vcf.gz 
+     ├── {samples}_summary.genes.txt       
+     └── {samples}_summary.html
+```
