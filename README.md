@@ -111,8 +111,43 @@ RNAseq_paired
 ├── Quliamap
 │    └── sample.Aligned.sortedByCoord.out_stats
 │         ├── css
+│         │    ├── agogo.css
+│         │    ├── ajax-loader.gif
+│         │    ├── basic.css
+│         │    ├── bgfooter.png
+│         │    ├── bgtop.png
+│         │    ├── comment-bright.png
+│         │    ├── comment-close.png
+│         │    ├── comment.png
+│         │    ├── doctools.js
+│         │    ├── down-pressed.png
+│         │    ├── down.png
+│         │    ├── file.png
+│         │    ├── jquery.js
+│         │    ├── minus.png
+│         │    ├── plus.png
+│         │    ├── pygments.css
+│         │    ├── qualimap_logo_small.png
+│         │    ├── report.css
+│         │    ├── searchtools.js
+│         │    ├── underscore.js
+│         │    ├── up-pressed.png
+│         │    ├── up.png
+│         │    └── websupport.js
 │         ├── genome_results.txt
 │         ├── images_qualimapReport
+│         │    ├── genome_coverage_0to50_histogram.png
+│         │    ├── genome_coverage_across_reference.png
+│         │    ├── genome_coverage_histogram.png
+│         │    ├── genome_coverage_quotes.png
+│         │    ├── genome_gc_content_per_window.png
+│         │    ├── genome_insert_size_across_reference.png
+│         │    ├── genome_insert_size_histogram.png
+│         │    ├── genome_mapping_quality_across_reference.png
+│         │    ├── genome_mapping_quality_histogram.png
+│         │    ├── genome_reads_clipping_profile.png
+│         │    ├── genome_reads_content_per_read_position.png
+│         │    └── genome_uniq_read_starts_histogram.png
 │         ├── qualimapReport.html
 │         └── raw_data_qualimapReport
 │              ├── coverage_across_reference.txt
@@ -178,6 +213,59 @@ RNAseq_single
 │    ├── merged_FPKM.csv
 │    └── merged_TPM.csv
 ├── Quliamap
+│    └── sample.Aligned.sortedByCoord.out_stats
+│         ├── css
+│         │    ├── agogo.css
+│         │    ├── ajax-loader.gif
+│         │    ├── basic.css
+│         │    ├── bgfooter.png
+│         │    ├── bgtop.png
+│         │    ├── comment-bright.png
+│         │    ├── comment-close.png
+│         │    ├── comment.png
+│         │    ├── doctools.js
+│         │    ├── down-pressed.png
+│         │    ├── down.png
+│         │    ├── file.png
+│         │    ├── jquery.js
+│         │    ├── minus.png
+│         │    ├── plus.png
+│         │    ├── pygments.css
+│         │    ├── qualimap_logo_small.png
+│         │    ├── report.css
+│         │    ├── searchtools.js
+│         │    ├── underscore.js
+│         │    ├── up-pressed.png
+│         │    ├── up.png
+│         │    └── websupport.js
+│         ├── genome_results.txt
+│         ├── images_qualimapReport
+│         │    ├── genome_coverage_0to50_histogram.png
+│         │    ├── genome_coverage_across_reference.png
+│         │    ├── genome_coverage_histogram.png
+│         │    ├── genome_coverage_quotes.png
+│         │    ├── genome_gc_content_per_window.png
+│         │    ├── genome_insert_size_across_reference.png
+│         │    ├── genome_insert_size_histogram.png
+│         │    ├── genome_mapping_quality_across_reference.png
+│         │    ├── genome_mapping_quality_histogram.png
+│         │    ├── genome_reads_clipping_profile.png
+│         │    ├── genome_reads_content_per_read_position.png
+│         │    └── genome_uniq_read_starts_histogram.png
+│         ├── qualimapReport.html
+│         └── raw_data_qualimapReport
+│              ├── coverage_across_reference.txt
+│              ├── coverage_histogram.txt
+│              ├── duplication_rate_histogram.txt
+│              ├── genome_fraction_coverage.txt
+│              ├── homopolymer_indels.txt
+│              ├── insert_size_across_reference.txt
+│              ├── insert_size_histogram.txt
+│              ├── mapped_reads_clipping_profile.txt
+│              ├── mapped_reads_gc-content_distribution.txt
+│              ├── mapped_reads_nucleotide_content.txt
+│              ├── mapping_quality_across_reference.txt
+│              └── mapping_quality_histogram.txt
 ├── RSEMForPaired
 │    ├── sample.Aligned.toTranscriptome.out.genes.results
 │    └── sample.Aligned.toTranscriptome.out.isoforms.results
