@@ -1,11 +1,14 @@
 # Nextflow-RNASeq
 ## หัวข้อ
 1. [บทนำ](#1-บทนำ)
-2. [การใช้งาน Nextflow-Annotations](#2-การใช้งาน-Nextflow-Annotations)
-3. [การเตรียมเครื่องมือและข้อมูลสำหรับ Nextflow-Annotations](#3-การเตรียมเครื่องมือและข้อมูลสำหรับ-Nextflow-Annotations)
-4. [รายละเอียดขั้นตอนใน Nextflow-Annotations](#4-รายละเอียดขั้นตอนใน-Nextflow-Annotations)
-5. [การปรับแต่งการ Annotations ใน VEP](#5-การปรับแต่งการ-Annotations-ใน-VEP)
-6. [Output](#6-Output)
+2. [การใช้งาน Nextflow-RNASeq](#2-การใช้งาน-Nextflow-RNASeq)
+3. [การเตรียมเครื่องมือและข้อมูลสำหรับ Nextflow-RNASeq](#3-การเตรียมเครื่องมือและข้อมูลสำหรับ-Nextflow-Annotations)
+4. [รายละเอียดขั้นตอนใน Nextflow-RNASeq](#4-รายละเอียดขั้นตอนใน-Nextflow-Annotations)
+5. [Output](#5-Output)
+   
+---
+## 1. บทนำ
+Nextflow-RNASeq เป็น bioinformatics pipline ที่พัฒนาขึ้นสำหรับการทำ RNASeq โดยจะมีขั้นตอนดังต่อไปนี้ 
 ## For run single-end
 ```bash
 nextflow run -profile gb main.nf \
@@ -79,35 +82,106 @@ Annotations_custom
 ```bash
 RNAseq_paired
 ├── DESeq2ForGene
+│    ├── DEG_list.csv
+│    ├── DEG_report.pdf
+│    ├── DESeq2.log
+│    ├── Heatmap_DEG.png
+│    ├── Heatmap_sample.png
+│    ├── MA_plot.png
+│    ├── normalized_count.csv
+│    ├── normalized_count_DEG.csv
+│    ├── sammary_table.csv
+│    └── Volcano_plot.png
 ├── DESeq2ForIso
+│    ├── DEG_list.csv
+│    ├── DEG_report.pdf
+│    ├── DESeq2.log
+│    ├── Heatmap_DEG.png
+│    ├── Heatmap_sample.png
+│    ├── MA_plot.png
+│    ├── normalized_count.csv
+│    ├── normalized_count_DEG.csv
+│    ├── sammary_table.csv
+│    └── Volcano_plot.png
 ├── FastpForPaired
+│    ├── sample_q<phred-score>.cutadap.html
+│    ├── sample_q<phred-score>.cutadap.json
+│    ├── sample_R1_q<phred-score>.cutadap.gz
+│    └── sample_R2_q<phred-score>.cutadap.gz
 ├── FastqcForPairedAfter
+│    ├── sample_R1_q<phred-score>.cutadap_fastqc.html
+│    ├── sample_R1_q<phred-score>.cutadap_fastqc.zip
+│    ├── sample_R2_q<phred-score>.cutadap_fastqc.html
+│    └── sample_R2_q<phred-score>.cutadap_fastqc.zip
 ├── FastqcForPairedBefore
+│    ├── sample_R1_fastqc.html
+│    ├── sample_R1_fastqc.zip
+│    ├── sample_R2_fastqc.html
+│    └── sample_R2_fastqc.zip
 ├── MergeRSEMResultsGenes
+│    ├── merged_expected_count.csv
+│    ├── merged_FPKM.csv
+│    └── merged_TPM.csv
 ├── MergeRSEMResultsIso
+│    ├── merged_expected_count.csv
+│    ├── merged_FPKM.csv
+│    └── merged_TPM.csv
 ├── Quliamap
 ├── RSEMForPaired
-├── STARForPaired
-
-
-│    ├──{samples}_SnpSift.vcf.gz
-└── ANN_snpEff
-     ├── {samples}.ann.vcf.gz 
-     ├── {samples}_summary.genes.txt       
-     └── {samples}_summary.html
+│    ├── sample.Aligned.toTranscriptome.out.genes.results
+│    └── sample.Aligned.toTranscriptome.out.isoforms.results
+└── STARForPaired
+     ├── sample.Aligned.sortedByCoord.out.bam
+     └── sample.Aligned.toTranscriptome.out.bam
 ```
 
 ```bash
-Annotations
-├── Call_ANN
-│    ├── {samples}_overlap_shared.vcf.gz
-├── Combine_VCF
-│    ├── {samples}_combine.vcf.gz
-├── Compare_results
-│    ├── {samples}_overlap.vcf.gz
-│    └── {samples}_unique.vcf.gz
-└── ANN_snpEff
-     ├── {samples}.ann.vcf.gz 
-     ├── {samples}_summary.genes.txt       
-     └── {samples}_summary.html
+RNAseq_single
+├── DESeq2ForGene
+│    ├── DEG_list.csv
+│    ├── DEG_report.pdf
+│    ├── DESeq2.log
+│    ├── Heatmap_DEG.png
+│    ├── Heatmap_sample.png
+│    ├── MA_plot.png
+│    ├── normalized_count.csv
+│    ├── normalized_count_DEG.csv
+│    ├── sammary_table.csv
+│    └── Volcano_plot.png
+├── DESeq2ForIso
+│    ├── DEG_list.csv
+│    ├── DEG_report.pdf
+│    ├── DESeq2.log
+│    ├── Heatmap_DEG.png
+│    ├── Heatmap_sample.png
+│    ├── MA_plot.png
+│    ├── normalized_count.csv
+│    ├── normalized_count_DEG.csv
+│    ├── sammary_table.csv
+│    └── Volcano_plot.png
+├── FastpForSingle
+│    ├── sample_q<phred-score>.cutadap.html
+│    ├── sample_q<phred-score>.cutadap.json
+│    └── sample_q<phred-score>.cutadap.gz
+├── FastqcForPairedAfter
+│    ├── sample_q<phred-score>.cutadap_fastqc.html
+│    └── sample_q<phred-score>.cutadap_fastqc.zip
+├── FastqcForPairedBefore
+│    ├── sample_fastqc.html
+│    └── sample_fastqc.zip
+├── MergeRSEMResultsGenes
+│    ├── merged_expected_count.csv
+│    ├── merged_FPKM.csv
+│    └── merged_TPM.csv
+├── MergeRSEMResultsIso
+│    ├── merged_expected_count.csv
+│    ├── merged_FPKM.csv
+│    └── merged_TPM.csv
+├── Quliamap
+├── RSEMForPaired
+│    ├── sample.Aligned.toTranscriptome.out.genes.results
+│    └── sample.Aligned.toTranscriptome.out.isoforms.results
+└── STARForPaired
+     ├── sample.Aligned.sortedByCoord.out.bam
+     └── sample.Aligned.toTranscriptome.out.bam
 ```
