@@ -62,24 +62,6 @@ nextflow run -profile gb main.nf \
 ## 6. Output
 ### ภาพรวม Output
 ```bash
-Annotations
-└── ANN_snpEff
-     ├── {samples}.ann.vcf.gz 
-     ├── {samples}_summary.genes.txt       
-     └── {samples}_summary.html
-```
-
-```bash
-Annotations_custom
-├── BuildCustomDB
-│    ├──snpeff_build.log
-└── ANN_snpEff
-     ├── {samples}.ann.vcf.gz 
-     ├── {samples}_summary.genes.txt       
-     └── {samples}_summary.html
-```
-
-```bash
 RNAseq_paired
 ├── DESeq2ForGene
 │    ├── DEG_list.csv
@@ -127,6 +109,24 @@ RNAseq_paired
 │    ├── merged_FPKM.csv
 │    └── merged_TPM.csv
 ├── Quliamap
+│    └── sample.Aligned.sortedByCoord.out_stats
+│         ├── css
+│         ├── genome_results.txt
+│         ├── images_qualimapReport
+│         ├── qualimapReport.html
+│         └── raw_data_qualimapReport
+│              ├── coverage_across_reference.txt
+│              ├── coverage_histogram.txt
+│              ├── duplication_rate_histogram.txt
+│              ├── genome_fraction_coverage.txt
+│              ├── homopolymer_indels.txt
+│              ├── insert_size_across_reference.txt
+│              ├── insert_size_histogram.txt
+│              ├── mapped_reads_clipping_profile.txt
+│              ├── mapped_reads_gc-content_distribution.txt
+│              ├── mapped_reads_nucleotide_content.txt
+│              ├── mapping_quality_across_reference.txt
+│              └── mapping_quality_histogram.txt
 ├── RSEMForPaired
 │    ├── sample.Aligned.toTranscriptome.out.genes.results
 │    └── sample.Aligned.toTranscriptome.out.isoforms.results
