@@ -85,6 +85,8 @@ RNAseq_paired
 │    ├── normalized_count_DEG.csv
 │    ├── sammary_table.csv
 │    └── Volcano_plot.png
+├── FastQC_visualize
+│    └── summary.csv 
 ├── FastpForPaired
 │    ├── sample_q<phred-score>.cutadap.html
 │    ├── sample_q<phred-score>.cutadap.json
@@ -162,6 +164,8 @@ RNAseq_paired
 │              ├── mapped_reads_nucleotide_content.txt
 │              ├── mapping_quality_across_reference.txt
 │              └── mapping_quality_histogram.txt
+├── Qualimap_visualize
+│    └── qualimap_summary.csv
 ├── RSEMForPaired
 │    ├── sample.Aligned.toTranscriptome.out.genes.results
 │    └── sample.Aligned.toTranscriptome.out.isoforms.results
@@ -194,6 +198,8 @@ RNAseq_single
 │    ├── normalized_count_DEG.csv
 │    ├── sammary_table.csv
 │    └── Volcano_plot.png
+├── FastQC_visualize
+│    └── summary.csv 
 ├── FastpForSingle
 │    ├── sample_q<phred-score>.cutadap.html
 │    ├── sample_q<phred-score>.cutadap.json
@@ -266,6 +272,8 @@ RNAseq_single
 │              ├── mapped_reads_nucleotide_content.txt
 │              ├── mapping_quality_across_reference.txt
 │              └── mapping_quality_histogram.txt
+├── Qualimap_visualize
+│    └── qualimap_summary.cs
 ├── RSEMForPaired
 │    ├── sample.Aligned.toTranscriptome.out.genes.results
 │    └── sample.Aligned.toTranscriptome.out.isoforms.results
