@@ -63,24 +63,23 @@ nextflow run -profile gb main.nf \
     --output results \
 ```
 ### Options
-- `--input` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น:“GRCh38”)
-- `--fastq`
-- `--fasta` = โฟลเดอร์ input (จำเป็น:ค่าเริ่มต้น:data)
-- `--gtf` = โฟล์เดอร์ output (จำเป็น:ค่าเริ่มต้น:output)
-- `--conditions_file` = เส้นทาง VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
-- `--fastq` = เส้นทางไฟล์ VCF ในการเปรียบเทียบในขั้นตอน Comapare_VCF (ไม่จำเป็น)
-- `--reads_type`  = เลือกไฟล์ config ในการรัน Nextflow `--input` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น:“GRCh38”)
-- `--multimap` = โฟลเดอร์ input (จำเป็น:ค่าเริ่มต้น:data)
-- `--unmaped` = โฟล์เดอร์ output (จำเป็น:ค่าเริ่มต้น:output)
-- `--overhang` = เส้นทาง VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
-- `--conditions` = เส้นทางไฟล์ VCF ในการเปรียบเทียบในขั้นตอน Comapare_VCF (ไม่จำเป็น)
-- `--contrast`  = เลือกไฟล์ config ในการรัน Nextflow
-- `--padj`  = เลือกไฟล์ config ในการรัน Nextflow
-- `--lfc`  = เลือกไฟล์ config ในการรัน Nextflow
-- `--adapter`  = เลือกไฟล์ config ในการรัน Nextflow
-- `--minlen`  = เลือกไฟล์ config ในการรัน Nextflow
-- `--phred`  = เลือกไฟล์ config ในการรัน Nextflow
-- `--output`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--input` = โฟลเดอร์หรือไฟล์ input (จำเป็น)
+- `--fastq` = โฟลเดอร์ไฟล์ fastq (จำเป็น:สำหรับ --reads_type csv)
+- `--fasta` = ไฟล์ fasta (จำเป็น)
+- `--gtf` = ไฟล์ gtf (จำเป็น)
+- `--conditions_file` = ไฟล์ conditions สำหรับทำ Differential gene expression (จำเป็น:--reads_type single-end หรือ paired-end)
+- `--reads_type`  = ชนิดของ reads (จำเป็น:single-end, paired-end, csv|ค่าเริ่มต้น:paired-end)
+- `--adapter` = adapter ที่ต้องการตัด (ค่าเริ่มต้น:AGATCGGAAGAG)
+- `--minlen` = จำนวน reads ที่สั้นที่สุดที่ยอมรับได้สำหรับขั้นตอน Pre-processing (ค่าเริ่มต้น:50)
+- `--phred` = ค่า phred score สำหรับขั้นตอน Pre-processing (ค่าเริ่มต้น:20)
+- `--conditions` = conditions สำหรับทำ Differential gene expression (จำเป็น)
+- `--contrast`  = conditions ที่จะเปลี่ยบเทียบ (จำเป็น:A_vs_B)
+- `--multimap` = จำนวนสูงสุดที่ reads จะ mapped กับตำแน่งใน Reference ในขั้นตอน Alingment(ค่าเริ่มต้น:10)
+- `--unmaped` = ไฟล์ unmapped จาก ขั้นตอน Alignment (Within หรือ null|ค่าเริ่มต้น:null)
+- `--overhang` = จำนวน reads ที่ยาวที่สุด -1 (ค่าเริ่มต้น:100)
+- `--padj` =  ค่า padj ในขั้นตอน Differential gene expression
+- `--lfc` =  ค่า log2 fold change ในขั้นตอน Differential gene expression
+- `--output` = โฟลเดอร์หรือไฟล์ output (จำเป็น)
 ## 3. การเตรียมเครื่องมือและข้อมูลสำหรับ Nextflow-RNASeq
 ## เครืองมือ 
 ### การเตรียม Config
@@ -223,6 +222,7 @@ singularity {
 }
 ```
 ## 4. รายละเอียดขั้นตอนใน Nextflow-RNASeq
+### การทำ Pre-processing
 ```bash
 process FastqcForPaired {
 
@@ -380,6 +380,7 @@ process FastpForSingle {
   """
 }
 ```
+### การทำ Sequenece Alingment และ Quantification
 ```bash
 process STAR_INDEX {
 
@@ -663,6 +664,7 @@ EOF
   """
 }
 ```
+### การทำ Differential gene expression
 ```bash
 process DESeq2 {
 
