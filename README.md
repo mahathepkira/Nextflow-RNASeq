@@ -674,8 +674,6 @@ process DESeq2 {
       --output . \
       > DESeq2.log 2>&1
     """
-
-```
 ```
 ## 5. Output
 ### ภาพรวม Output
