@@ -9,6 +9,7 @@
 ---
 ## 1. บทนำ
 Nextflow-RNASeq เป็น bioinformatics pipline ที่พัฒนาขึ้นสำหรับการทำ RNASeq โดยจะมีขั้นตอนดังต่อไปนี้ 
+## 2. การใช้งาน Nextflow-RNASeq
 ## For run single-end
 ```bash
 nextflow run -profile gb main.nf \
