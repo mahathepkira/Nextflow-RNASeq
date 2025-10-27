@@ -63,12 +63,24 @@ nextflow run -profile gb main.nf \
     --output results \
 ```
 ### Options
-- `--build` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น:“GRCh38”)
-- `--input` = โฟลเดอร์ input (จำเป็น:ค่าเริ่มต้น:data)
-- `--outdir` = โฟล์เดอร์ output (จำเป็น:ค่าเริ่มต้น:output)
-- `--vep_config` = เส้นทาง VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
-- `--vcf_compare` = เส้นทางไฟล์ VCF ในการเปรียบเทียบในขั้นตอน Comapare_VCF (ไม่จำเป็น)
-- `-profile`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--input` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น:“GRCh38”)
+- `--fastq`
+- `--fasta` = โฟลเดอร์ input (จำเป็น:ค่าเริ่มต้น:data)
+- `--gtf` = โฟล์เดอร์ output (จำเป็น:ค่าเริ่มต้น:output)
+- `--conditions_file` = เส้นทาง VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
+- `--fastq` = เส้นทางไฟล์ VCF ในการเปรียบเทียบในขั้นตอน Comapare_VCF (ไม่จำเป็น)
+- `--reads_type`  = เลือกไฟล์ config ในการรัน Nextflow `--input` = build genome มีผลกับชื่อ output (จำเป็น:ค่าเริ่มต้น:“GRCh38”)
+- `--multimap` = โฟลเดอร์ input (จำเป็น:ค่าเริ่มต้น:data)
+- `--unmaped` = โฟล์เดอร์ output (จำเป็น:ค่าเริ่มต้น:output)
+- `--overhang` = เส้นทาง VEP_GRCh38.ini (จำเป็น:ค่าเริ่มต้น:bin/VEP_GRCh38.ini)
+- `--conditions` = เส้นทางไฟล์ VCF ในการเปรียบเทียบในขั้นตอน Comapare_VCF (ไม่จำเป็น)
+- `--contrast`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--padj`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--lfc`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--adapter`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--minlen`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--phred`  = เลือกไฟล์ config ในการรัน Nextflow
+- `--output`  = เลือกไฟล์ config ในการรัน Nextflow
 ## 3. การเตรียมเครื่องมือและข้อมูลสำหรับ Nextflow-RNASeq
 ## เครืองมือ 
 ### การเตรียม Config
