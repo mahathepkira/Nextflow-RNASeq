@@ -915,7 +915,7 @@ RNAseq_single
      ├── sample.Aligned.sortedByCoord.out.bam
      └── sample.Aligned.toTranscriptome.out.bam
 ```
-![ภาพ](Heatmap-DEG.png)
+![ภาพ](Heatmap_DEG.png)
 ![ภาพ](Nextflow-Callvariants.drawio.png)
 ![ภาพ](Nextflow-Callvariants.drawio.png)
 ![ภาพ](Nextflow-Callvariants.drawio.png)
