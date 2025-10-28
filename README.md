@@ -17,6 +17,7 @@ nextflow run -profile gb main.nf \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
     --conditions_file /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
+    --mode fastq \
     --reads_type single-end \
     --multimap 1 \
     --unmaped Within \
@@ -34,6 +35,7 @@ nextflow run -profile gb main.nf \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
     --conditions_file /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
+    --mode fastq \
     --reads_type paired-end \
     --multimap 1 \
     --unmaped Within \
@@ -52,7 +54,8 @@ nextflow run -profile gb main.nf \
     --input /nbt_main/home/lattapol/nextflow-RNAseq/data/aha2.csv \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
-    --reads_type csv \
+    --mode csv \
+    --reads_type paired-end \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
@@ -67,8 +70,9 @@ nextflow run -profile gb main.nf \
 - `--fastq` = โฟลเดอร์ไฟล์ fastq (จำเป็น:สำหรับ --reads_type csv)
 - `--fasta` = ไฟล์ fasta (จำเป็น)
 - `--gtf` = ไฟล์ gtf (จำเป็น)
-- `--conditions_file` = ไฟล์ conditions สำหรับทำ Differential gene expression (จำเป็น:--reads_type single-end หรือ paired-end)
-- `--reads_type`  = ชนิดของ reads (จำเป็น:single-end, paired-end, csv|ค่าเริ่มต้น:paired-end)
+- `--conditions_file` = ไฟล์ conditions สำหรับทำ Differential gene expression 
+- `--reads_type`  = ชนิดของ reads (จำเป็น:single-end, paired-end|ค่าเริ่มต้น:paired-end)
+- `--mode` = mode ไฟล์ input (จำเป็น:fastq, csv|ค่าเริ่มต้น:csv)
 - `--adapter` = adapter ที่ต้องการตัด (ค่าเริ่มต้น:AGATCGGAAGAG)
 - `--minlen` = จำนวน reads ที่สั้นที่สุดที่ยอมรับได้สำหรับขั้นตอน Pre-processing (ค่าเริ่มต้น:50)
 - `--phred` = ค่า phred score สำหรับขั้นตอน Pre-processing (ค่าเริ่มต้น:20)
