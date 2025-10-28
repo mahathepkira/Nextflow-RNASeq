@@ -916,6 +916,6 @@ RNAseq_single
      └── sample.Aligned.toTranscriptome.out.bam
 ```
 ![ภาพ](Heatmap_DEG.png)
-![ภาพ](Nextflow-Callvariants.drawio.png)
-![ภาพ](Nextflow-Callvariants.drawio.png)
-![ภาพ](Nextflow-Callvariants.drawio.png)
+![ภาพ](Heatmap_samples.png)
+![ภาพ](MA_plot.png)
+![ภาพ](Volcano_plot.png)
