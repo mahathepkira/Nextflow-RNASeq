@@ -92,9 +92,10 @@ nextflow run -profile gb main.nf \
 ## เครืองมือ 
 1. Nextflow: version 19
 2. Pre-processing: Fastp version 0.24.3, FastQC version 0.11.9
-3. Sequence Alignment and Quantification: STAR version 2.7.11b, Qualimap versions 2.3, RSEM versiion 1.3.3
+3. Sequence Alignment and Quantification: STAR version 2.7.11b, Qualimap versions 2.3, RSEM version 1.3.3
 4. Differential gene expression: R version 4.5.1
 ### การเตรียม Config
+ผู้ใช้งานสามารปรับแต่งเครื่องมือที่ใช้งานในไฟล์ gb.config ให้เหมาะสมกับทรัพยากรในเครื่อง โดย gb.config จะทำงานรวมกับ nextflow.config โดยจะใช้ตัวเลือก `-profile` เพื่อเลือก config ที่จะใช้งาน
 ```bash
 process {
   executor = 'slurm'
@@ -235,6 +236,7 @@ singularity {
 ```
 ## 4. รายละเอียดขั้นตอนใน Nextflow-RNASeq
 ### การทำ Pre-processing
+เครื่องมือชีวสารสนเทศในการทำ Pre-processing ได้แก่ Fastp (version 0.24.3) สำหรับการปรับแต่งคุณภาพข้อมูล และใช้ FastQC (version 0.11.9) ในการแสดงผลข้อมูลก่อนและหลังปรับแต่งคุณภาพของข้อมูล 
 ```bash
 process FastqcForPaired {
 
@@ -393,6 +395,7 @@ process FastpForSingle {
 }
 ```
 ### การทำ Sequenece Alingment และ Quantification
+เครื่องมือชีวสารสนเทศในการทำ Sequenece Alingment ได้แก่ STAR (version 2.7.11b) และใช้ Qualimap (versions 2.3) ในการแสดงผลการ mapped ของข้อมูล reads ตัวอย่างกับ Reference ส่วนการทำ Quantification ได้ใช้เครื่องมือ RSEM (version 1.3.3) ในการนับ 
 ```bash
 process STAR_INDEX {
 
@@ -677,6 +680,7 @@ EOF
 }
 ```
 ### การทำ Differential gene expression
+เครื่องมือชีวสารสนเทศที่ใช้ในการทำ Differential gene expression ได้แก่ DESeq2 ซึ่งเป็น package ของ R (version 4.5.1)
 ```bash
 process DESeq2 {
 
