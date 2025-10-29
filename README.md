@@ -923,6 +923,7 @@ RNAseq_single
      ├── sample.Aligned.sortedByCoord.out.bam
      └── sample.Aligned.toTranscriptome.out.bam
 ```
+### ภาพตัวอย่าง Heatmap ของ DEG
 ![ภาพตัวอย่าง Heatmap ของ DEG](Heatmap_DEG.png)
 ![ภาพตัวอย่าง Heatmap ของ ตัวอย่าง](Heatmap_samples.png)
 ![ภาพตัวอย่างกราฟ MA plot](MA_plot.png)
