@@ -9,6 +9,9 @@
 ---
 ## 1. บทนำ
 Nextflow-RNASeq เป็น bioinformatics pipline ที่พัฒนาขึ้นสำหรับการทำ RNASeq โดยจะมีขั้นตอนดังต่อไปนี้ 
+1. Pre-processing
+2. Sequence Alignment and Quantification
+3. Differential gene expression
 ## 2. การใช้งาน Nextflow-RNASeq
 ### การใช้งานแบบ single-end
 ```bash
