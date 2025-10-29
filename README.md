@@ -925,6 +925,9 @@ RNAseq_single
 ```
 ### ภาพตัวอย่าง Heatmap ของ DEG
 ![ภาพตัวอย่าง Heatmap ของ DEG](Heatmap_DEG.png)
+### ภาพตัวอย่าง Heatmap ของ ตัวอย่าง
 ![ภาพตัวอย่าง Heatmap ของ ตัวอย่าง](Heatmap_samples.png)
+### ภาพตัวอย่างกราฟ MA plot
 ![ภาพตัวอย่างกราฟ MA plot](MA_plot.png)
+### ภาพตัวอย่างกราฟ Volcano
 ![ภาพตัวอย่างกราฟ Volcano](Volcano_plot.png)
