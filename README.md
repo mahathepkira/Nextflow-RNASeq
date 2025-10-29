@@ -50,7 +50,7 @@ nextflow run -profile gb main.nf \
     --output output \
 ```
 
-### For run meta Data
+### การใช้งานแบบ meta Data
 ```bash
 nextflow run -profile gb main.nf \
     --fastq data \
@@ -70,10 +70,10 @@ nextflow run -profile gb main.nf \
 ```
 ### Options
 - `--input` = โฟลเดอร์หรือไฟล์ input (จำเป็น)
-- `--fastq` = โฟลเดอร์ไฟล์ fastq (จำเป็น:สำหรับ --reads_type csv)
+- `--fastq` = โฟลเดอร์ไฟล์ fastq (จำเป็น:สำหรับ `--mode` csv)
 - `--fasta` = ไฟล์ fasta (จำเป็น)
 - `--gtf` = ไฟล์ gtf (จำเป็น)
-- `--conditions_file` = ไฟล์ conditions สำหรับทำ Differential gene expression 
+- `--conditions_file` = ไฟล์ csv ที่มี conditions ของตัวอย่าง สำหรับทำ Differential gene expression 
 - `--reads_type`  = ชนิดของ reads (จำเป็น:single-end, paired-end|ค่าเริ่มต้น:paired-end)
 - `--mode` = mode ไฟล์ input (จำเป็น:fastq, csv|ค่าเริ่มต้น:csv)
 - `--adapter` = adapter ที่ต้องการตัด (ค่าเริ่มต้น:AGATCGGAAGAG)
@@ -81,7 +81,7 @@ nextflow run -profile gb main.nf \
 - `--phred` = ค่า phred score สำหรับขั้นตอน Pre-processing (ค่าเริ่มต้น:20)
 - `--conditions` = conditions สำหรับทำ Differential gene expression (จำเป็น)
 - `--contrast`  = conditions ที่จะเปลี่ยบเทียบ (จำเป็น:A_vs_B)
-- `--multimap` = จำนวนสูงสุดที่ reads จะ mapped กับตำแน่งใน Reference ในขั้นตอน Alingment(ค่าเริ่มต้น:10)
+- `--multimap` = จำนวนสูงสุดที่ reads จะ mapped กับตำแน่งใน Reference ในขั้นตอน Alingment (ค่าเริ่มต้น:10)
 - `--unmaped` = ไฟล์ unmapped จาก ขั้นตอน Alignment (Within หรือ null|ค่าเริ่มต้น:null)
 - `--overhang` = จำนวน reads ที่ยาวที่สุด -1 (ค่าเริ่มต้น:100)
 - `--padj` =  ค่า padj ในขั้นตอน Differential gene expression
