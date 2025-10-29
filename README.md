@@ -12,7 +12,7 @@ Nextflow-RNASeq เป็น bioinformatics pipline ที่พัฒนาข�
 1. Pre-processing
 2. Sequence Alignment and Quantification
 3. Differential gene expression
-4. ![ภาพตัวอย่าง Heatmap ของ DEG](Nextflow-RNASeq.png)
+4. !(Nextflow-RNASeq.drawio.png)
 ## 2. การใช้งาน Nextflow-RNASeq
 ### การใช้งานแบบ single-end
 ```bash
