@@ -90,10 +90,16 @@ nextflow run -profile gb main.nf \
 - `--output` = โฟลเดอร์หรือไฟล์ output (จำเป็น)
 ## 3. การเตรียมเครื่องมือและข้อมูลสำหรับ Nextflow-RNASeq
 ## เครืองมือ 
-1. Nextflow: version 19
-2. Pre-processing: Fastp version 0.24.3, FastQC version 0.11.9
-3. Sequence Alignment and Quantification: STAR version 2.7.11b, Qualimap versions 2.3, RSEM version 1.3.3
-4. Differential gene expression: R version 4.5.1
+Nextflow: version 19
+1. Pre-processing
+   - Fastp version 0.24.3
+   - FastQC version 0.11.9
+2. Sequence Alignment and Quantification
+   - STAR version 2.7.11b
+   - Qualimap versions 2.3
+   - RSEM version 1.3.3
+4. Differential gene expression:
+   - R version 4.5.1
 ### การเตรียม Config
 ผู้ใช้งานสามารปรับแต่งเครื่องมือที่ใช้งานในไฟล์ gb.config ให้เหมาะสมกับทรัพยากรในเครื่อง โดย gb.config จะทำงานรวมกับ nextflow.config โดยจะใช้ตัวเลือก `-profile` เพื่อเลือก config ที่จะใช้งาน
 ```bash
