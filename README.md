@@ -35,8 +35,8 @@ nextflow run -profile gb main.nf \
 ```bash
 nextflow run -profile gb main.nf \
     --input <path>/input \
-    --fasta <path>/fasta \
-    --gtf <path>/gtf \
+    --fasta <path>/reference.fa \
+    --gtf <path>/reference.gtf \
     --conditions_file <path>/conditions.csv \
     --mode fastq \
     --reads_type paired-end  \
@@ -74,6 +74,23 @@ nextflow run -profile gb main.nf \
     --fastq data \
     --input /nbt_main/home/lattapol/nextflow-RNAseq/data/aha2.csv \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
+    --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
+    --mode csv \
+    --reads_type paired-end \
+    --multimap 1 \
+    --unmaped Within \
+    --overhang 100 \
+    --conditions con3 \
+    --contrast ESR_vs_Fi \
+    --padj 0.05 \
+    --lfc 1.0 \
+    --output results \
+```
+```bash
+nextflow run -profile gb main.nf \
+    --fastq <path>/input \
+    --input <path>/input.csv \
+    --fasta <path>/refernce  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
     --mode csv \
     --reads_type paired-end \
