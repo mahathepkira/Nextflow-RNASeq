@@ -39,7 +39,7 @@ nextflow run -profile gb main.nf \
     --gtf <path>/reference.gtf \
     --conditions_file <path>/conditions.csv \
     --mode fastq \
-    --reads_type paired-end  \
+    --reads_type single-end \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
@@ -90,15 +90,15 @@ nextflow run -profile gb main.nf \
 nextflow run -profile gb main.nf \
     --fastq <path>/input \
     --input <path>/input.csv \
-    --fasta <path>/refernce  \
-    --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
+    --fasta <path>/reference.fa  \
+    --gtf <path>/reference.gtf \
     --mode csv \
     --reads_type paired-end \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
-    --conditions con3 \
-    --contrast ESR_vs_Fi \
+    --conditions Condition \
+    --contrast A_vs_B \
     --padj 0.05 \
     --lfc 1.0 \
     --output results \
