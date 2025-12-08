@@ -39,7 +39,7 @@ nextflow run -profile gb main.nf \
     --gtf <path>/gtf \
     --conditions_file <path>/conditions.csv \
     --mode fastq \
-    --reads_type single-end \
+    --reads_type paired-end  \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
