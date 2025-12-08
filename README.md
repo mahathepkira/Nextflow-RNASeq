@@ -32,6 +32,23 @@ nextflow run -profile gb main.nf \
     --lfc 1.0 \
     --output output \
 ```
+```bash
+nextflow run -profile gb main.nf \
+    --input data-single \
+    --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
+    --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
+    --conditions_file /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
+    --mode fastq \
+    --reads_type single-end \
+    --multimap 1 \
+    --unmaped Within \
+    --overhang 100 \
+    --conditions Condition \
+    --contrast ESR_vs_Fi \
+    --padj 0.05 \
+    --lfc 1.0 \
+    --output output \
+```
 ### การใช้งานแบบ paired-end  
 ```bash
 nextflow run -profile gb main.nf \
