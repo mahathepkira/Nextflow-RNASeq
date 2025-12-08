@@ -34,17 +34,17 @@ nextflow run -profile gb main.nf \
 ```
 ```bash
 nextflow run -profile gb main.nf \
-    --input data-single \
-    --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
-    --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
-    --conditions_file /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
+    --input <path>/input \
+    --fasta <path>/fasta \
+    --gtf <path>/gtf \
+    --conditions_file <path>/conditions.csv \
     --mode fastq \
     --reads_type single-end \
     --multimap 1 \
     --unmaped Within \
     --overhang 100 \
     --conditions Condition \
-    --contrast ESR_vs_Fi \
+    --contrast A_vs_B \
     --padj 0.05 \
     --lfc 1.0 \
     --output output \
