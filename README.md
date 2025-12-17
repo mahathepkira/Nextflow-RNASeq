@@ -17,7 +17,7 @@ Nextflow-RNASeq เป็น bioinformatics pipline ที่พัฒนาข�
 ### การใช้งานแบบ single-end
 ```bash
 nextflow run -profile gb main.nf \
-    --input data-single \
+    --fastq data-single \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
     --conditions_file /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
@@ -34,10 +34,10 @@ nextflow run -profile gb main.nf \
 ```
 ```bash
 nextflow run -profile gb main.nf \
-    --input <path>/input \
+    --fastq <path>/input \
     --fasta <path>/reference.fa \
     --gtf <path>/reference.gtf \
-    --conditions_file <path>/conditions.csv \
+    --meta <path>/conditions.csv \
     --mode fastq \
     --reads_type single-end \
     --multimap 1 \
@@ -52,10 +52,10 @@ nextflow run -profile gb main.nf \
 ### การใช้งานแบบ paired-end  
 ```bash
 nextflow run -profile gb main.nf \
-    --input data-paired \
+    --fastq data-paired \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
-    --conditions_file /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
+    --meta /nbt_main/home/lattapol/nextflow-RNAseq/data/conditions_test2.csv \
     --mode fastq \
     --reads_type paired-end \
     --multimap 1 \
@@ -72,7 +72,7 @@ nextflow run -profile gb main.nf \
 ```bash
 nextflow run -profile gb main.nf \
     --fastq data \
-    --input /nbt_main/home/lattapol/nextflow-RNAseq/data/aha2.csv \
+    --meta /nbt_main/home/lattapol/nextflow-RNAseq/data/aha2.csv \
     --fasta /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.fa  \
     --gtf /nbt_main/home/lattapol/mycassava/reference/Mesculenta_305_v6.1.gene.gtf \
     --mode csv \
