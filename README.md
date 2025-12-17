@@ -148,6 +148,8 @@ Nextflow: version 19
 ผู้ใช้งานสามารปรับแต่งเครื่องมือที่ใช้งานในไฟล์ gb.config ให้เหมาะสมกับทรัพยากรในเครื่อง โดย gb.config จะทำงานรวมกับ nextflow.config โดยจะใช้ตัวเลือก `-profile` เพื่อเลือก config ที่จะใช้งาน
 ```bash
 Project
+├── bin
+│    └── DESeq2.R
 ├── configs
 │    └── gb.config
 ├── modules
