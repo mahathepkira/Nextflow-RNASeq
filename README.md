@@ -147,6 +147,29 @@ Nextflow: version 19
 ### การเตรียม Config
 ผู้ใช้งานสามารปรับแต่งเครื่องมือที่ใช้งานในไฟล์ gb.config ให้เหมาะสมกับทรัพยากรในเครื่อง โดย gb.config จะทำงานรวมกับ nextflow.config โดยจะใช้ตัวเลือก `-profile` เพื่อเลือก config ที่จะใช้งาน
 ```bash
+Project
+├── configs
+│    └── gb.config
+├── modules
+│    ├── nbt
+│    │    ├── help.nf
+│    │    ├── log.nf
+│    │    └── utils.nf
+│    ├── DESeq2.nf
+│    ├── alignment.nf
+│    ├── count.nf
+│    ├── preprocess.nf
+│    ├── rsem.nf
+│    └── visualize.nf
+├── schemas
+│    ├── key.avsc
+│    ├── register.sh
+│    └── value.avsc
+├── main.nf
+└── nextflow.config
+
+```
+```bash
 process {
   executor = 'slurm'
   queue = 'memory'
