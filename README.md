@@ -57,8 +57,6 @@ nextflow run -profile gb main.nf --fastq fastq --fasta reference/reference.fa \
     --reads_type <single-end> or <paired-end>  \
     --conditions Condition1 \
     --contrast A_vs_B \
-    --padj 0.05 \
-    --lfc 1.0 \
     --output output \
 ```
 
