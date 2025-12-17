@@ -794,8 +794,8 @@ Project
 ├── reference
 │    ├── reference.fasta
 │    └── reference.gtf
-└── genotype
-     └── genotype.csv
+└── phenotype
+     └── phenotype.csv
 
 ```
 ```bash
