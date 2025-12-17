@@ -52,8 +52,8 @@ nextflow run -profile gb main.nf \
 ```bash
 nextflow run -profile gb main.nf --fastq fastq --fasta reference/reference.fa \
     --gtf reference/reference.gtf \
-    --meta genotype.csv \
-    --mode fastq \
+    --meta meta.csv \
+    --mode csv \
     --reads_type <single-end> or <paired-end>  \
     --conditions Condition1 \
     --contrast A_vs_B \
