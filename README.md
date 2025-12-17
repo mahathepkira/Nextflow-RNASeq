@@ -52,7 +52,7 @@ nextflow run -profile gb main.nf \
 ```bash
 nextflow run -profile gb main.nf --fastq fastq --fasta reference/reference.fa \
     --gtf reference/reference.gtf \
-    --meta meta.csv \
+    --meta metadata.csv \
     --mode csv \
     --reads_type <single-end> or <paired-end>  \
     --conditions Condition1 \
@@ -787,7 +787,7 @@ Project
 │    ├── reference.fasta
 │    └── reference.gtf
 └── metadata
-     └── medata.csv
+     └── metadata.csv
 ```
 
 ```bash
