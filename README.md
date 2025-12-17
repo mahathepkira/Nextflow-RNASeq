@@ -748,6 +748,38 @@ process DESeq2 {
 ## 5. Output
 ### ภาพรวม Output
 ```bash
+Project
+├── fastq
+│    ├── XXX01_R1.fastq.gz
+│    ├── XXX01_R2.fastq.gz
+│    ├── XXX02_R1.fastq.gz
+│    ├── XXX02_R2.fastq.gz
+│    ├── XXX03_R1.fastq.gz
+│    └── XXX03_R2.fastq.gz
+├── reference
+│    ├── reference.fasta
+│    └── reference.gtf
+└── genotype
+     └── genotype.csv
+
+```
+```bash
+Project
+├── fastq
+│    ├── XXX01_R1.fastq.gz
+│    ├── XXX01_R2.fastq.gz
+│    ├── XXX02_R1.fastq.gz
+│    ├── XXX02_R2.fastq.gz
+│    ├── XXX03_R1.fastq.gz
+│    └── XXX03_R2.fastq.gz
+├── reference
+│    ├── reference.fasta
+│    └── reference.gtf
+└── metadata
+     └── medata.csv
+```
+
+```bash
 RNAseq_paired
 ├── DESeq2ForGene
 │    ├── DEG_list.csv
