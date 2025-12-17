@@ -115,11 +115,10 @@ nextflow run -profile gb main.nf \
     --output results \
 ```
 ### Options
-- `--input` = โฟลเดอร์หรือไฟล์ input (จำเป็น)
-- `--fastq` = โฟลเดอร์ไฟล์ fastq (จำเป็น:สำหรับ `--mode` csv)
+- `--fastq` = โฟลเดอร์ไฟล์ fastq 
 - `--fasta` = ไฟล์ fasta (จำเป็น)
 - `--gtf` = ไฟล์ gtf (จำเป็น)
-- `--conditions_file` = ไฟล์ csv ที่มี conditions ของตัวอย่าง สำหรับทำ Differential gene expression 
+- `--meta` = ไฟล์ csv ที่มี conditions ของตัวอย่าง สำหรับทำ Differential gene expression (สำหรับ --mode csv จะมีข้อมูล reads อยู่ด้วย)
 - `--reads_type`  = ชนิดของ reads (จำเป็น:single-end, paired-end|ค่าเริ่มต้น:paired-end)
 - `--mode` = mode ไฟล์ input (จำเป็น:fastq, csv|ค่าเริ่มต้น:csv)
 - `--adapter` = adapter ที่ต้องการตัด (ค่าเริ่มต้น:AGATCGGAAGAG)
