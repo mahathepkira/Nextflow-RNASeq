@@ -59,6 +59,16 @@ nextflow run -profile gb main.nf --fastq fastq --fasta reference/reference.fa \
     --contrast A_vs_B \
     --output output \
 ```
+```bash
+nextflow run -profile gb main.nf --fastq fastq --fasta reference/reference.fa \
+    --gtf reference/reference.gtf \
+    --meta phenotype.csv \
+    --mode csv \
+    --reads_type <single-end> or <paired-end>  \
+    --conditions Condition1 \
+    --contrast A_vs_B \
+    --output output \
+```
 
 ### การใช้งานแบบ paired-end  
 ```bash
