@@ -49,6 +49,19 @@ nextflow run -profile gb main.nf \
     --lfc 1.0 \
     --output output \
 ```
+```bash
+nextflow run -profile gb main.nf --fastq fastq --fasta reference/reference.fa \
+    --gtf reference/reference.gtf \
+    --meta genotype.csv \
+    --mode fastq \
+    --reads_type <single-end> or <paired-end>  \
+    --conditions Condition1 \
+    --contrast A_vs_B \
+    --padj 0.05 \
+    --lfc 1.0 \
+    --output output \
+```
+
 ### การใช้งานแบบ paired-end  
 ```bash
 nextflow run -profile gb main.nf \
